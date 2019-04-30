@@ -26,7 +26,7 @@ app.listen(ENVIRONMENT.SERVER_PORT,async()=>{
                         "¡Successful Connection to MongoDB"+"</br>"+
                         "¡Server Web APIs - REST DEMO - ON LINE!"
                     );
-                    res.end();
+                    res.en();
                 });
                 app.use(ENVIRONMENT.ROUTES_MAIN_MODULES.EVENTS.NAME_ROUTE,routesEvents);
             }).catch(err=>{

@@ -37,9 +37,9 @@ exports.PostZone=async (req,res)=>{
 };
 
 exports.PutZone=async (req,res)=>{
-    const datos = req.body;
-    const idzona = req.params.id
-    await Cat_zonas.update(idzona)
+    const idzona=req.params.id;
+    const descripcion=req.body.descZona;
+    await Cat_zonas.updateOne({IdZona:idzona},{$set:{DesZona:descripcion,FechaUltMod:FORMATS_FOR_DATE_AND_TIME().DATE_UTC,UsuarioMod:'BRIAN'}})
         .then
         (data=>
             {
